@@ -31,7 +31,16 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(quantity*5);
+        int price =quantity*5;
+        String priceMessage=createOrderSummery(price);
+        displayMessage(priceMessage);
+    }
+    private String createOrderSummery(int price){
+        String priceMessage = "Name : Prashant Abhishek";
+        priceMessage=priceMessage+"\nQuantity=" + quantity;
+        priceMessage=priceMessage+"\nTotal: $ "+ price;
+        priceMessage=priceMessage + "\nThank You";
+        return priceMessage;
     }
     /**
      * This method is called when the - button is clicked.
@@ -50,11 +59,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the given quantity value on the screen.
+     * This method displays the given message value on the screen.
      */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+
+    private void displayMessage(String message){
+        TextView priceTextView = (TextView) findViewById(R.id.orderSummery_text_view);
+        priceTextView.setText(message);
     }
 
 }
