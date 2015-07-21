@@ -16,6 +16,20 @@
         <dex dex="/Users/demo/AndroidStudioProjects/Happy/app/build/intermediates/pre-dexed/debug/classes-1d7b8b9cfc79719c37996c14b3ab2deef5b29968.jar" />
     </item>
     <item
+        jar="/Users/demo/Projects/coffee_order_app/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/demo/Projects/coffee_order_app/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-df908f3e81c7d3a18faffd3f71b78809549c8302.jar" />
+    </item>
+    <item
+        jar="/Users/demo/Projects/coffee_order_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/demo/Projects/coffee_order_app/app/build/intermediates/pre-dexed/debug/classes-c0917368d19c4396e8057692b778efdc65d3c634.jar" />
+    </item>
+    <item
         jar="/Users/demo/Documents/Softpedia/Android Devlopment/Developer/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -28,6 +42,13 @@
         revision="22.0.1"
         sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
         <dex dex="/Users/demo/AndroidStudioProjects/Happy/app/build/intermediates/pre-dexed/debug/classes-8b58c6f389fa4a6b08ec9065417cd4ef912ae222.jar" />
+    </item>
+    <item
+        jar="/Users/demo/Projects/coffee_order_app/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/demo/Projects/coffee_order_app/app/build/intermediates/pre-dexed/debug/classes-bc124a2b696f81240c48f1bd022c698fabab5784.jar" />
     </item>
 
 </items>

@@ -4,6 +4,8 @@ package com.example.zion.happy;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -31,15 +33,48 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price =quantity*5;
-        String priceMessage=createOrderSummery(price);
+        //Field for user name input
+        EditText nameField =(EditText)findViewById(R.id.user_Name);
+        String name = nameField.getText().toString();
+
+        //check weather the user want wipped cream or not
+        CheckBox wippedCreamCheckBox= (CheckBox) findViewById(R.id.cream_checkbox);
+        boolean hasWippedCream=wippedCreamCheckBox.isChecked();
+
+        //check weather the user want chocolate or not
+        CheckBox chocolateBox=(CheckBox) findViewById(R.id.chocolate_box);
+        boolean isChocolate = chocolateBox.isChecked();
+
+        int price =calculatePrice(hasWippedCream,isChocolate);
+        String priceMessage = createOrderSummery(price,hasWippedCream,name,isChocolate);
         displayMessage(priceMessage);
     }
-    private String createOrderSummery(int price){
-        String priceMessage = "Name : Prashant Abhishek";
-        priceMessage=priceMessage+"\nQuantity=" + quantity;
-        priceMessage=priceMessage+"\nTotal: $ "+ price;
-        priceMessage=priceMessage + "\nThank You";
+
+    //calculate price
+    //calculate price for chocolate adding and wipped added
+
+    private int calculatePrice(boolean addWippped,boolean addChocolate){
+        int basePrice=5;
+        //if wipped is added
+
+        if (addWippped){
+            basePrice+=1;
+        }
+
+        //if chocolate is added
+        if (addChocolate){
+            basePrice+=2;
+        }
+        return quantity*basePrice;
+    }
+
+    private String createOrderSummery(int price,boolean addWippedCream,String name,boolean isChocolate){
+        String priceMessage = "Name : "+name;
+        priceMessage+="\nAdd Wipped Cream? "+addWippedCream;
+        priceMessage+="\nAdd Wipped Cream? "+isChocolate;
+        priceMessage+="\nQuantity=" + quantity;
+        priceMessage+="\nTotal: $ "+ price;
+        priceMessage+= "\nThank You";
         return priceMessage;
     }
     /**
